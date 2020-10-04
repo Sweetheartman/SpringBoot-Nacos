@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.senyint.exercise.mapper.EmpiPatientMapper">
+  <resultMap id="BaseResultMap" type="com.senyint.exercise.entity.EmpiPatient">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    <id column="ID" jdbcType="INTEGER" property="id" />
+    <result column="EMPI_ID" jdbcType="VARCHAR" property="empiId" />
+    <result column="ORG_CODE" jdbcType="VARCHAR" property="orgCode" />
+    <result column="ORG_NAME" jdbcType="VARCHAR" property="orgName" />
+    <result column="DOMAIN_ID" jdbcType="VARCHAR" property="domainId" />
+    <result column="LOCAL_ID" jdbcType="VARCHAR" property="localId" />
+    <result column="OUTPATIENT_NO" jdbcType="VARCHAR" property="outpatientNo" />
+    <result column="INPATIENT_NO" jdbcType="VARCHAR" property="inpatientNo" />
+    <result column="PATIENT_NAME" jdbcType="VARCHAR" property="patientName" />
+    <result column="PY_CODE" jdbcType="VARCHAR" property="pyCode" />
+    <result column="GENDER_CODE" jdbcType="VARCHAR" property="genderCode" />
+    <result column="GENDER_NAME" jdbcType="VARCHAR" property="genderName" />
+    <result column="BIRTH_DATE" jdbcType="DATE" property="birthDate" />
+    <result column="SOCIAL_NO" jdbcType="VARCHAR" property="socialNo" />
+    <result column="TELECOM" jdbcType="VARCHAR" property="telecom" />
+    <result column="EMAIL" jdbcType="VARCHAR" property="email" />
+    <result column="IDENTITY_TYPE" jdbcType="VARCHAR" property="identityType" />
+    <result column="IDENTITY_NAME" jdbcType="VARCHAR" property="identityName" />
+    <result column="IDENTITY_NO" jdbcType="VARCHAR" property="identityNo" />
+    <result column="MARITAL_STATUS_CODE" jdbcType="VARCHAR" property="maritalStatusCode" />
+    <result column="MARITAL_STATUS_NAME" jdbcType="VARCHAR" property="maritalStatusName" />
+    <result column="EDUCATION_LEVEL_CODE" jdbcType="VARCHAR" property="educationLevelCode" />
+    <result column="EDUCATION_LEVEL_NAME" jdbcType="VARCHAR" property="educationLevelName" />
+    <result column="NATIONALITY_CODE" jdbcType="VARCHAR" property="nationalityCode" />
+    <result column="NATIONALITY_NAME" jdbcType="VARCHAR" property="nationalityName" />
+    <result column="NATION_CODE" jdbcType="VARCHAR" property="nationCode" />
+    <result column="NATION_NAME" jdbcType="VARCHAR" property="nationName" />
+    <result column="OCCUPATION_CODE" jdbcType="VARCHAR" property="occupationCode" />
+    <result column="OCCUPATION_NAME" jdbcType="VARCHAR" property="occupationName" />
+    <result column="WORK_UNIT" jdbcType="VARCHAR" property="workUnit" />
+    <result column="WORK_TEL" jdbcType="VARCHAR" property="workTel" />
+    <result column="ABO_CODE" jdbcType="VARCHAR" property="aboCode" />
+    <result column="ABO_NAME" jdbcType="VARCHAR" property="aboName" />
+    <result column="RH_CODE" jdbcType="VARCHAR" property="rhCode" />
+    <result column="RH_NAME" jdbcType="VARCHAR" property="rhName" />
+    <result column="HOME_FULL_ADDRESS" jdbcType="VARCHAR" property="homeFullAddress" />
+    <result column="HOME_ADDR_PROVINCE" jdbcType="VARCHAR" property="homeAddrProvince" />
+    <result column="HOME_ADDR_CITY" jdbcType="VARCHAR" property="homeAddrCity" />
+    <result column="HOME_ADDR_COUNTY" jdbcType="VARCHAR" property="homeAddrCounty" />
+    <result column="HOME_ADDR_TOWN" jdbcType="VARCHAR" property="homeAddrTown" />
+    <result column="HOME_ADDR_VILLAGE" jdbcType="VARCHAR" property="homeAddrVillage" />
+    <result column="HOME_ADDR_HOUSE_NO" jdbcType="VARCHAR" property="homeAddrHouseNo" />
+    <result column="HOME_ZIP_CODE" jdbcType="VARCHAR" property="homeZipCode" />
+    <result column="PRESENT_FULL_ADDRESS" jdbcType="VARCHAR" property="presentFullAddress" />
+    <result column="PRESENT_ADDR_PROVINCE" jdbcType="VARCHAR" property="presentAddrProvince" />
+    <result column="PRESENT_ADDR_CITY" jdbcType="VARCHAR" property="presentAddrCity" />
+    <result column="PRESENT_ADDR_COUNTY" jdbcType="VARCHAR" property="presentAddrCounty" />
+    <result column="PRESENT_ADDR_TOWN" jdbcType="VARCHAR" property="presentAddrTown" />
+    <result column="PRESENT_ADDR_VILLAGE" jdbcType="VARCHAR" property="presentAddrVillage" />
+    <result column="PRESENT_ADDR_HOUSE_NO" jdbcType="VARCHAR" property="presentAddrHouseNo" />
+    <result column="PRESENT_ZIP_CODE" jdbcType="VARCHAR" property="presentZipCode" />
+    <result column="RESIDENCE_FULL_ADDRESS" jdbcType="VARCHAR" property="residenceFullAddress" />
+    <result column="RESIDENCE_ADDR_PROVINCE" jdbcType="VARCHAR" property="residenceAddrProvince" />
+    <result column="RESIDENCE_ADDR_CITY" jdbcType="VARCHAR" property="residenceAddrCity" />
+    <result column="RESIDENCE_ADDR_COUNTY" jdbcType="VARCHAR" property="residenceAddrCounty" />
+    <result column="RESIDENCE_ADDR_TOWN" jdbcType="VARCHAR" property="residenceAddrTown" />
+    <result column="RESIDENCE_ADDR_VILLAGE" jdbcType="VARCHAR" property="residenceAddrVillage" />
+    <result column="RESIDENCE_ADDR_HOUSE_NO" jdbcType="VARCHAR" property="residenceAddrHouseNo" />
+    <result column="RESIDENCE_ZIP_CODE" jdbcType="VARCHAR" property="residenceZipCode" />
+    <result column="CONTACT_RELATIONSHIP_CODE" jdbcType="VARCHAR" property="contactRelationshipCode" />
+    <result column="CONTACT_RELATIONSHIP_NAME" jdbcType="VARCHAR" property="contactRelationshipName" />
+    <result column="CONTACT_NAME" jdbcType="VARCHAR" property="contactName" />
+    <result column="CONTACT_TELECOM" jdbcType="VARCHAR" property="contactTelecom" />
+    <result column="CONTACT_FULL_ADDRESS" jdbcType="VARCHAR" property="contactFullAddress" />
+    <result column="CONTACT_ADDR_PROVINCE" jdbcType="VARCHAR" property="contactAddrProvince" />
+    <result column="CONTACT_ADDR_CITY" jdbcType="VARCHAR" property="contactAddrCity" />
+    <result column="CONTACT_ADDR_COUNTY" jdbcType="VARCHAR" property="contactAddrCounty" />
+    <result column="CONTACT_ADDR_TOWN" jdbcType="VARCHAR" property="contactAddrTown" />
+    <result column="CONTACT_ADDR_VILLAGE" jdbcType="VARCHAR" property="contactAddrVillage" />
+    <result column="CONTACT_ADDR_HOUSE_NO" jdbcType="VARCHAR" property="contactAddrHouseNo" />
+    <result column="CONTACT_ZIP_CODE" jdbcType="VARCHAR" property="contactZipCode" />
+    <result column="MEDICAL_CARD_NO" jdbcType="VARCHAR" property="medicalCardNo" />
+    <result column="INSURANCE_NO" jdbcType="VARCHAR" property="insuranceNo" />
+    <result column="INSURANCE_TYPE_CODE" jdbcType="VARCHAR" property="insuranceTypeCode" />
+    <result column="INSURANCE_TYPE_NAME" jdbcType="VARCHAR" property="insuranceTypeName" />
+    <result column="HEALTH_CARD_NO" jdbcType="VARCHAR" property="healthCardNo" />
+    <result column="HEALTH_CARD_ORG_CODE" jdbcType="VARCHAR" property="healthCardOrgCode" />
+    <result column="HEALTH_CARD_ORG_NAME" jdbcType="VARCHAR" property="healthCardOrgName" />
+    <result column="HEALTH_RECORD_NO" jdbcType="VARCHAR" property="healthRecordNo" />
+    <result column="HEALTH_RECORD_ORG_CODE" jdbcType="VARCHAR" property="healthRecordOrgCode" />
+    <result column="HEALTH_RECORD_ORG_NAME" jdbcType="VARCHAR" property="healthRecordOrgName" />
+    <result column="REGISTRANT_CODE" jdbcType="VARCHAR" property="registrantCode" />
+    <result column="REGISTRANT_NAME" jdbcType="VARCHAR" property="registrantName" />
+    <result column="REGIST_DATETIME" jdbcType="DATE" property="registDatetime" />
+    <result column="DATA_FLAG" jdbcType="INTEGER" property="dataFlag" />
+    <result column="DATA_QUALITY" jdbcType="INTEGER" property="dataQuality" />
+    <result column="RECORD_SCORE" jdbcType="DECIMAL" property="recordScore" />
+    <result column="CREATE_TIME" jdbcType="DATE" property="createTime" />
+    <result column="CREATE_BY" jdbcType="VARCHAR" property="createBy" />
+    <result column="UPDATE_COUNT" jdbcType="INTEGER" property="updateCount" />
+    <result column="UPDATE_TIME" jdbcType="DATE" property="updateTime" />
+    <result column="UPDATE_BY" jdbcType="VARCHAR" property="updateBy" />
+    <result column="DELETE_FLAG" jdbcType="CHAR" property="deleteFlag" />
+    <result column="DELETE_TIME" jdbcType="DATE" property="deleteTime" />
+    <result column="DELETE_BY" jdbcType="VARCHAR" property="deleteBy" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--
+      WARNING - @mbg.generated
+    -->
+    ID, EMPI_ID, ORG_CODE, ORG_NAME, DOMAIN_ID, LOCAL_ID, OUTPATIENT_NO, INPATIENT_NO, 
+    PATIENT_NAME, PY_CODE, GENDER_CODE, GENDER_NAME, BIRTH_DATE, SOCIAL_NO, TELECOM, 
+    EMAIL, IDENTITY_TYPE, IDENTITY_NAME, IDENTITY_NO, MARITAL_STATUS_CODE, MARITAL_STATUS_NAME, 
+    EDUCATION_LEVEL_CODE, EDUCATION_LEVEL_NAME, NATIONALITY_CODE, NATIONALITY_NAME, NATION_CODE, 
+    NATION_NAME, OCCUPATION_CODE, OCCUPATION_NAME, WORK_UNIT, WORK_TEL, ABO_CODE, ABO_NAME, 
+    RH_CODE, RH_NAME, HOME_FULL_ADDRESS, HOME_ADDR_PROVINCE, HOME_ADDR_CITY, HOME_ADDR_COUNTY, 
+    HOME_ADDR_TOWN, HOME_ADDR_VILLAGE, HOME_ADDR_HOUSE_NO, HOME_ZIP_CODE, PRESENT_FULL_ADDRESS, 
+    PRESENT_ADDR_PROVINCE, PRESENT_ADDR_CITY, PRESENT_ADDR_COUNTY, PRESENT_ADDR_TOWN, 
+    PRESENT_ADDR_VILLAGE, PRESENT_ADDR_HOUSE_NO, PRESENT_ZIP_CODE, RESIDENCE_FULL_ADDRESS, 
+    RESIDENCE_ADDR_PROVINCE, RESIDENCE_ADDR_CITY, RESIDENCE_ADDR_COUNTY, RESIDENCE_ADDR_TOWN, 
+    RESIDENCE_ADDR_VILLAGE, RESIDENCE_ADDR_HOUSE_NO, RESIDENCE_ZIP_CODE, CONTACT_RELATIONSHIP_CODE, 
+    CONTACT_RELATIONSHIP_NAME, CONTACT_NAME, CONTACT_TELECOM, CONTACT_FULL_ADDRESS, CONTACT_ADDR_PROVINCE, 
+    CONTACT_ADDR_CITY, CONTACT_ADDR_COUNTY, CONTACT_ADDR_TOWN, CONTACT_ADDR_VILLAGE, 
+    CONTACT_ADDR_HOUSE_NO, CONTACT_ZIP_CODE, MEDICAL_CARD_NO, INSURANCE_NO, INSURANCE_TYPE_CODE, 
+    INSURANCE_TYPE_NAME, HEALTH_CARD_NO, HEALTH_CARD_ORG_CODE, HEALTH_CARD_ORG_NAME, 
+    HEALTH_RECORD_NO, HEALTH_RECORD_ORG_CODE, HEALTH_RECORD_ORG_NAME, REGISTRANT_CODE, 
+    REGISTRANT_NAME, REGIST_DATETIME, DATA_FLAG, DATA_QUALITY, RECORD_SCORE, CREATE_TIME, 
+    CREATE_BY, UPDATE_COUNT, UPDATE_TIME, UPDATE_BY, DELETE_FLAG, DELETE_TIME, DELETE_BY
+  </sql>
+</mapper>
