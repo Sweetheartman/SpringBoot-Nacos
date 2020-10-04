@@ -1,6 +1,7 @@
 package com.senyint.exercise.controller;
 
 import cn.shuibo.annotation.Decrypt;
+import com.netflix.ribbon.proxy.annotation.Http;
 import com.senyint.exercise.aop.annotation.MyLog;
 import com.senyint.exercise.contants.Constant;
 import com.senyint.exercise.entity.SysUser;
