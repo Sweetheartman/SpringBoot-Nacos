@@ -33,6 +33,7 @@ public class WebAppConfig implements WebMvcConfigurer {
         ArrayList<String> openUrl = new ArrayList<>();
         openUrl.add("/api/user/login");
         openUrl.add("/api/user/info");
+        openUrl.add("/api/user/token");
         registry.addInterceptor(tokenInterceptpr())
                 .addPathPatterns("/api/**")
                 .excludePathPatterns(openUrl);

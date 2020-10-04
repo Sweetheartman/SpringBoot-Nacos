@@ -50,8 +50,9 @@ public class UserController {
     @ApiOperation(value = "根据AccessToken获取用户信息接口")
     @GetMapping("/user/info")
     @MyLog(title = "用户接口", action = "根据AccessToken获取用户信息接口")
-    public DataResult<UserInfoRespVO> getUserInfoByAccessToken(@RequestParam String access_token){
+    public DataResult<UserInfoRespVO> getUserInfoByAccessToken(HttpServletRequest request){
         DataResult result = DataResult.success();
+        String access_token = request.getHeader(Constant.ACCESS_TOKEN);
         SysUser sysUser = userService.getUserInfoByAccessToken(access_token);
         UserInfoRespVO vo = new UserInfoRespVO();
         BeanUtils.copyProperties(sysUser, vo);
