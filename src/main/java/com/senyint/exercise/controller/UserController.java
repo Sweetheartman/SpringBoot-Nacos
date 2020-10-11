@@ -52,8 +52,8 @@ public class UserController {
     @MyLog(title = "用户接口", action = "根据AccessToken获取用户信息接口")
     public DataResult<UserInfoRespVO> getUserInfoByAccessToken(HttpServletRequest request){
         DataResult result = DataResult.success();
-        String access_token = request.getHeader(Constant.ACCESS_TOKEN);
-        SysUser sysUser = userService.getUserInfoByAccessToken(access_token);
+        String accessToken = request.getHeader(Constant.ACCESS_TOKEN);
+        SysUser sysUser = userService.getUserInfoByAccessToken(accessToken);
         UserInfoRespVO vo = new UserInfoRespVO();
         BeanUtils.copyProperties(sysUser, vo);
         List<String> roles = new ArrayList<>(1);

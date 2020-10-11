@@ -4,7 +4,6 @@ import com.alibaba.druid.util.StringUtils;
 import com.github.pagehelper.PageHelper;
 import com.senyint.exercise.entity.*;
 import com.senyint.exercise.mapper.EmpiPatientMapper;
-import com.senyint.exercise.mapper.OrgMapper;
 import com.senyint.exercise.mapper.SysUserMapper;
 import com.senyint.exercise.service.EmpiPatientService;
 import com.senyint.exercise.service.GenderService;
@@ -49,10 +48,12 @@ public class EmpiPatientServiceImpl implements EmpiPatientService {
     private GenderService genderService;
 
     /**
-     * 分页获取所有患者的信息（未删除和条件查询）
-     * @param vo
-     * @return
-     */
+    * @Description: 分页获取所有患者的信息（未删除和条件查询）
+    * @Param: [vo]
+    * @return: com.senyint.exercise.vo.resp.PageVO<com.senyint.exercise.vo.resp.PatientRespVO>
+    * @Author: LiDeKun
+    * @Date: 2020/10/11  
+    */
     @Override
     public PageVO<PatientRespVO> getPatients(PatientReqVO vo) {
         Example example = new Example(EmpiPatient.class);
@@ -77,10 +78,12 @@ public class EmpiPatientServiceImpl implements EmpiPatientService {
     }
 
     /**
-     * 添加患者信息
-     * @param empiPatient
-     * @param accessToken
-     */
+    * @Description: 添加患者信息
+    * @Param: [empiPatient, accessToken]
+    * @return: void
+    * @Author: LiDeKun
+    * @Date: 2020/10/11  
+    */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void addPatient(EmpiPatient empiPatient, String accessToken) {
@@ -116,10 +119,12 @@ public class EmpiPatientServiceImpl implements EmpiPatientService {
     }
 
     /**
-     * 更新患者信息
-     * @param empiPatient
-     * @param accessToken
-     */
+    * @Description: 更新患者信息
+    * @Param: [empiPatient, accessToken]
+    * @return: void
+    * @Author: LiDeKun
+    * @Date: 2020/10/11
+    */
     @Override
     @Transactional(rollbackFor = Exception.class)
     public void updatePatient(EmpiPatient empiPatient, String accessToken) {

@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
 /**
  * @program: springboot-demo
  * @description: Api版本控制器(测试接口)
- * @author: lidekun
+ * @author: LiDeKun
  * @create: 2020-09-26 00:38
  **/
 @RestController
