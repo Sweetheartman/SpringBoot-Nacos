@@ -28,5 +28,5 @@ public class UserInfoRespVO {
     @ApiModelProperty(value = "角色信息")
     private List<String> roles;
     @ApiModelProperty(value = "默认头像")
-    private String avatar = "http://blog.spirit-guy.com/upload/image/icon.jpg";
+    private String avatar = "http://www.spirit-guy.com/upload/image/icon.jpg";
 }
